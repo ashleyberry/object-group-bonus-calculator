@@ -40,4 +40,12 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
+function employeeBonus( employee )
+//input employee object
+//console log each employee object
+
+function takesOneEmployeeObjectAndReturnsNewObject( employee )
+//return new object
+//employee's name
+
 console.log( employees );
