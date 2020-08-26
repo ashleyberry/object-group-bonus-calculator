@@ -56,7 +56,10 @@ function bonusCalculation(employee){
 
   if(employee.reviewRating <= 2){
     let total = employee.annualSalary(0);
-  } else if (employee.reviewRating <= 2)
+  } else if {===3{}
+      let total = employee.annualSalary*.04;
+     else
+    (employee.reviewRating <= 2)
   }
 }
 
@@ -73,9 +76,12 @@ function takesOneEmployeeObjectAndReturnsNewObject( employee ){
     //totalBonus: //
   }
   for (let i = 0; i < employees.length; i++) {
-    newEmployee = employees[i];
+
+    console.log('newEmployee = employees[i];', newEmployee = employees[i]);
   }
 }
+    console.log(takesOneEmployeeObjectAndReturnsNewObject(employees))
+
     /*
     if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
       employee[i].bonusPercentage = .05
@@ -98,28 +104,3 @@ function takesOneEmployeeObjectAndReturnsNewObject( employee ){
 }//end function
 */
 
-console.log('takesOneEmployeeObjectAndReturnsNewObject(employees):', takesOneEmployeeObjectAndReturnsNewObject(employees));
-
-/*
-/*
-function bonusCalculation () {
-  console.log('in bonusCalculation:')
-  if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
-  return .05
-} else if (employee.reviewRating <= 2){
-  return 0;
-} else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4){
-  return .09;
-} else if (employee.reviewRating === 3){
-  return .04;
-} else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4){
-  return .11;
-} else if (employeeReviewRating === 4){
-  return .06;
-} else if (employeeReviewRating === 5 && employee.employeeNumber.length === 4){
-  return .15;
-} else if (employeeReviewRating === 5){
-  return .10;
-}
-} // end bonusCalculation
-*/
