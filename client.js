@@ -39,13 +39,87 @@ const employees = [
 
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
+//I am a ghost. Boooooooo
 
-function employeeBonus( employee )
-//input employee object
-//console log each employee object
+//1.take in information from employees object
+//2.do bonus calcuations
+//3.push results into new object
 
-function takesOneEmployeeObjectAndReturnsNewObject( employee )
-//return new object
-//employee's name
+/*
+for(let i = 0; i < employees.length; i++){
+  bonusCalcuations(employee[i])
+}
+*/
+/*
+function bonusCalculation(employee){
+  let total = 0;
 
-console.log( employees );
+  if(employee.reviewRating <= 2){
+    let total = employee.annualSalary(0);
+  } else if (employee.reviewRating <= 2)
+  }
+}
+
+
+
+*/
+
+function takesOneEmployeeObjectAndReturnsNewObject( employee ){
+  console.log('takesOneEmployeeObjectAndReturnsNewObject:', employee)
+  let newEmployee = {
+    name: employee.name,
+    //bonusPercentage: 
+    totalCompensation: employee.annualSalary
+    //totalBonus: //
+  }
+  for (let i = 0; i < employees.length; i++) {
+    newEmployee = employees[i];
+  }
+}
+    /*
+    if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
+      employee[i].bonusPercentage = .05
+    } else if (employee.reviewRating <= 2){
+      return 0;
+    } else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4){
+      return .09;
+    } else if (employee.reviewRating === 3){
+      return .04;
+    } else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4){
+      return .11;
+    } else if (employeeReviewRating === 4){
+      return .06;
+    } else if (employeeReviewRating === 5 && employee.employeeNumber.length === 4){
+      return .15;
+    } else if (employeeReviewRating === 5){
+      return .10;
+    } // end conditionals
+  } //end for loop
+}//end function
+*/
+
+console.log('takesOneEmployeeObjectAndReturnsNewObject(employees):', takesOneEmployeeObjectAndReturnsNewObject(employees));
+
+/*
+/*
+function bonusCalculation () {
+  console.log('in bonusCalculation:')
+  if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
+  return .05
+} else if (employee.reviewRating <= 2){
+  return 0;
+} else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4){
+  return .09;
+} else if (employee.reviewRating === 3){
+  return .04;
+} else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4){
+  return .11;
+} else if (employeeReviewRating === 4){
+  return .06;
+} else if (employeeReviewRating === 5 && employee.employeeNumber.length === 4){
+  return .15;
+} else if (employeeReviewRating === 5){
+  return .10;
+}
+} // end bonusCalculation
+*/
