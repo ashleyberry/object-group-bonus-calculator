@@ -56,51 +56,60 @@ function bonusCalculation(employee){
 
   if(employee.reviewRating <= 2){
     let total = employee.annualSalary(0);
-  } else if {===3{}
+  } else if (employee.reviewRating === 3){
       let total = employee.annualSalary*.04;
-     else
-    (employee.reviewRating <= 2)
+    } else
   }
 }
 
 
 
 */
+
+for (let employee of employees) {
+  let bonusInfo = takesOneEmployeeObjectAndReturnsNewObject(employee);
+  console.log(bonusInfo);
+}
+
 
 function takesOneEmployeeObjectAndReturnsNewObject( employee ){
-  console.log('takesOneEmployeeObjectAndReturnsNewObject:', employee)
+
+  //console.log('takesOneEmployeeObjectAndReturnsNewObject:', employee)
   let newEmployee = {
     name: employee.name,
-    //bonusPercentage: 
+    // bonusPercentage: employeeBonusPercentage,
+    //compensation = base salary + (base salary * bonus percentage)
     totalCompensation: employee.annualSalary
+    //total bonus = base salary * bonus percentage
     //totalBonus: //
   }
-  for (let i = 0; i < employees.length; i++) {
-
-    console.log('newEmployee = employees[i];', newEmployee = employees[i]);
-  }
-}
-    console.log(takesOneEmployeeObjectAndReturnsNewObject(employees))
-
-    /*
+    //console.log('newEmployee:', newEmployee)
     if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
-      employee[i].bonusPercentage = .05
+      console.log('employee.bonusPercentage:', employee.bonusPercentage)
+       newEmployee.bonusPercentage = .05;
+       console.log('newEmployee:', newEmployee)
     } else if (employee.reviewRating <= 2){
-      return 0;
+      newEmployee.bonusPercentage = 0;
     } else if (employee.reviewRating === 3 && employee.employeeNumber.length === 4){
-      return .09;
+      newEmployee.bonusPercentage = .09;
     } else if (employee.reviewRating === 3){
-      return .04;
+      newEmployee.bonusPercentage = .04;
     } else if (employee.reviewRating === 4 && employee.employeeNumber.length === 4){
-      return .11;
-    } else if (employeeReviewRating === 4){
-      return .06;
-    } else if (employeeReviewRating === 5 && employee.employeeNumber.length === 4){
-      return .15;
-    } else if (employeeReviewRating === 5){
-      return .10;
+      newEmployee.bonusPercentage = .11;
+    } else if (employee.reviewRating === 4){
+      newEmployee.bonusPercentage = .06;
+    } else if (employee.reviewRating === 5 && employee.employeeNumber.length === 4){
+      newEmployee.bonusPercentage = .15;
+    } else if (employee.reviewRating === 5){
+      newEmployee.bonusPercentage = .10;
     } // end conditionals
-  } //end for loop
-}//end function
+    return newEmployee;
+  } //end function
+ 
+    console.log(takesOneEmployeeObjectAndReturnsNewObject(employees))
+   /*
+    
+
 */
 
+console.log('takesOneEmployeeObjectAndReturnsNewObject(employees):', takesOneEmployeeObjectAndReturnsNewObject(employees));
