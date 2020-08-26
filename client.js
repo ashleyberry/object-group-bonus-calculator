@@ -77,16 +77,19 @@ function takesOneEmployeeObjectAndReturnsNewObject( employee ){
   //console.log('takesOneEmployeeObjectAndReturnsNewObject:', employee)
   let newEmployee = {
     name: employee.name,
-    // bonusPercentage: employeeBonusPercentage,
+    salary: employee.annualSalary
     //compensation = base salary + (base salary * bonus percentage)
-    totalCompensation: employee.annualSalary
-    //total bonus = base salary * bonus percentage
-    //totalBonus: //
+    // totalCompensation: newEmployee.totalBonus + employee.annualSalary,
+    // totalBonus: bonusPercentage * employee.annualSalary
+    //totalBonus: //2
   }
+  // newEmployee.totalBonus = newEmployee.bonusPercentage * employee.annualSalary;
     //console.log('newEmployee:', newEmployee)
     if (employee.reviewRating <= 2 && employee.employeeNumber.length === 4) {
       console.log('employee.bonusPercentage:', employee.bonusPercentage)
-       newEmployee.bonusPercentage = .05;
+      newEmployee.bonusPercentage = .05;
+      let bonusPay = newEmployee.bonusPercentage
+       newEmployee.totalBonus = bonusPay * newEmployee.salary;
        console.log('newEmployee:', newEmployee)
     } else if (employee.reviewRating <= 2){
       newEmployee.bonusPercentage = 0;
@@ -106,10 +109,10 @@ function takesOneEmployeeObjectAndReturnsNewObject( employee ){
     return newEmployee;
   } //end function
  
-    console.log(takesOneEmployeeObjectAndReturnsNewObject(employees))
+    //console.log(takesOneEmployeeObjectAndReturnsNewObject(employees))
    /*
     
 
 */
 
-console.log('takesOneEmployeeObjectAndReturnsNewObject(employees):', takesOneEmployeeObjectAndReturnsNewObject(employees));
+//console.log('takesOneEmployeeObjectAndReturnsNewObject(employees):', takesOneEmployeeObjectAndReturnsNewObject(employees));
